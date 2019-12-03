@@ -1,0 +1,57 @@
+html, body {
+    /* html fills page properly.  reset margin and padding before adjusting for elements later. */
+    height: 100%; 
+    width: 100%;
+    margin: 0;
+    
+    /* Google fonts, serif and sans serif as backups. */
+    font-family: "PlayFair Display", "Montserrat", serif, sans-serif;
+
+    background: url("./header.jpg") no-repeat  center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover;
+}
+
+.heading {
+  color: white;
+  margin: 1em;
+}
+.typewriter {
+  width: auto; 
+  display: inline-block;
+}
+
+.typewriter p {
+  background-color: inherit;
+  font-family: monospace;
+}
+/* This is from CSS-Tricks.  Useful, but i don't know how to build that myself yet */
+.typewriter span{
+  font-size: 1.2em;
+  font-family: inherit;
+  padding-top: .5rem;
+  color: #4AF626;
+  width: auto;
+  display: inherit;
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  letter-spacing: .18em;
+  animation: typing 3s steps(50, end),
+			 blink-caret .75s step-end infinite;
+}
+
+@keyframes typing{
+  from {max-width: 0}
+  to {max-width: 100%}
+}
+
+@keyframes blink-caret{
+  from, to {border-color: transparent}
+  50% {border-color: #4AF626}
+}

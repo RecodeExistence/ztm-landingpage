@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+
+<head>  
+    <title>RecodeLife Startup </title>
+    
+    <meta charset="utf-8">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Google Fonts: Playfair Display and Montserrat -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Playfair+Display:900&display=swap" rel="stylesheet">
+    
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="./style.css" type ="text/css">
+
+    <script> 
+    window.onload = windowLoadKeyListener;
+            function windowLoadKeyListener() {
+                document.addEventListener('keyup', (event) => { // using e.key for graceful degradation from e.keyCode.
+                    let key = event.key || event.keyCode;
+                    if(key === 'Enter' || key === 13) {
+                    console.log('keypress listener still working.'); 
+                    document.getElementById('enter-button-instructions').style.opacity="0";
+                    document.getElementById('scrolltext').innerText="Success! Let's get started!";
+        }
+    });
+}
+            
+    </script>
+</head>
+
+<body>
+    <div class = "fullpage">
+        <div class = "text-center heading">
+            <h1>RecodeLife.Tech Startup Page</h1>
+            <div class = "typewriter">
+                
+                <p>recodelifetech@startup:~$ <span id = "scrolltext">RefactorLife(1LineAtAtime)</span></p>
+                <p id = "enter-button-instructions">Press enter to continue...</p>
+        </div>
+    </div>
+
+        <div class = "btn btn-large text-center">Button</div>
+</div>
+</body>
+
+</html>
