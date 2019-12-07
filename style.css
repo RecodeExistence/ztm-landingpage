@@ -1,17 +1,77 @@
+.container, 
+.row {
+  height: 100%;
+  width: 100%;
+}
+
 html, body {
     /* html fills page properly.  reset margin and padding before adjusting for elements later. */
     height: 100%; 
     width: 100%;
     margin: 0;
     
-    /* Google fonts, serif and sans serif as backups. */
+    /* Google fonts, serif and sans serif as backups. Default for page unless specifically set by class further below.*/
     font-family: "PlayFair Display", "Montserrat", serif, sans-serif;
 
+    /* Full screen background image. */
     background: url("./header.jpg") no-repeat  center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover; 
     background-size: cover;
+}
+
+header {
+  height: 50%;
+  width: 50%;
+}
+
+hr {
+  border-color: black;
+  border-radius: .3em;
+  max-width: 65px;
+  height: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'PlayFair Display';
+  color: #4AF626;
+}
+
+#buffer {
+  height: 5rem;
+} 
+
+.btn {
+  font: inherit;
+  font-weight: 1000;
+  text-transform: uppercase;
+  color:#4AF626;
+  border: none;
+}
+
+.btn-primary {
+  font-family: 'Montserrat';
+  font-weight: 100; 
+  font-size: 18px;
+  background-color: transparent;
+  border-color: #aaa9ad;
+  border-radius: 60px;
+}
+
+.btn-primary:hover {
+  background-color: #4AF626;
+  color: black;
+  border-color:#aaa9ad;
+  transform: scale(1.1);
+  transition: transform(ease-in 2s); 
+  font-weight: bolder; 
+  font-size: 20px; 
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
 }
 
 .heading {
@@ -25,7 +85,7 @@ html, body {
 
 .typewriter p {
   background-color: inherit;
-  font-family: monospace;
+  font-family: 'Montserrat';
 }
 /* This is from CSS-Tricks.  Useful, but i don't know how to build that myself yet */
 .typewriter span{

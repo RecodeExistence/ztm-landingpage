@@ -4,46 +4,52 @@
 <head>  
     <title>RecodeLife Startup </title>
     
+    <!-- Required Meta Tags --> 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <!-- Google Fonts: Playfair Display and Montserrat -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Playfair+Display:900&display=swap" rel="stylesheet">
+    <!-- Orbitron Google Font; For buttons to look like wide laptop buttons.-->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     
     <!--Custom Stylesheet-->
     <link rel="stylesheet" href="./style.css" type ="text/css">
 
-    <script> 
-    window.onload = windowLoadKeyListener;
-            function windowLoadKeyListener() {
-                document.addEventListener('keyup', (event) => { // using e.key for graceful degradation from e.keyCode.
-                    let key = event.key || event.keyCode;
-                    if(key === 'Enter' || key === 13) {
-                    console.log('keypress listener still working.'); 
-                    document.getElementById('enter-button-instructions').style.opacity="0";
-                    document.getElementById('scrolltext').innerText="Success! Let's get started!";
-        }
-    });
-}
-            
-    </script>
 </head>
 
 <body>
-    <div class = "fullpage">
-        <div class = "text-center heading">
-            <h1>RecodeLife.Tech Startup Page</h1>
-            <div class = "typewriter">
-                
-                <p>recodelifetech@startup:~$ <span id = "scrolltext">RefactorLife(1LineAtAtime)</span></p>
-                <p id = "enter-button-instructions">Press enter to continue...</p>
-        </div>
-    </div>
+    <div class = "container container-fluid d-flex align-items-center h-100">
+        <div class = "row">
 
-        <div class = "btn btn-large text-center">Button</div>
-</div>
+        <header class = "text-center col-12">
+                <h1><strong>RecodeLife.Tech Startup Page</strong></h1>
+                <div class = "heading"> <!-- heading used for font color and margins-->
+                    <div class = "typewriter"> <!-- Typwriter animation on text. -->
+                        
+                        <p>recodelifetech@startup:~$ 
+                            <span id = "scrolltext">RefactorLife(1LineAtAtime)</span>
+                        </p>
+                        
+                        <p id = "enter-button-instructions">Press enter to continue...</p>
+                    </div>
+                </div>
+        </header>
+            
+        
+        <section class = "text-center col-12">
+                <div id = "buffer"></div>
+            <hr />
+            
+            <button class = "btn btn-primary btn-xl">Find Out More</button>
+        </section>    
+        </div>
+
+    </div>
+<script src = "scripts.js"></script>
 </body>
 
 </html>
